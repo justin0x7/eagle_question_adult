@@ -55,7 +55,7 @@ export default function OrsAndSatisfactionScalePage({
 
   return (
     <Container sx={{ maxWidth: "768px", backgroundColor: "#fafafa" }}>
-      <Typography variant="h4" align="center" color="success.main" fontWeight="bold" p={6}>ORS
+      <Typography variant="h4" align="center" color="success.main" fontWeight="bold" p={6}>VAS
         
       </Typography>
 

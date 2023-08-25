@@ -43,20 +43,20 @@ export default function App() {
   ];
   const orsData = [
     {
+      title: t("ORS.Feeling4"),
+      description: t("ORS.Generally")
+    },
+    {
       title: t("ORS.Feeling1"),
       description: t("ORS.Individual")
-    },    
-    {
-      title: t("ORS.Feeling2"),
-      description: t("ORS.CloseRelationships")
     },
     {
       title: t("ORS.Feeling3"),
       description: t("ORS.Social")
-    },
+    },    
     {
-      title: t("ORS.Feeling4"),
-      description: t("ORS.Generally")
+      title: t("ORS.Feeling2"),
+      description: t("ORS.CloseRelationships")
     },
   ];
   const satisfactionScaleData = [
