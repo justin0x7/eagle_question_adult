@@ -1,0 +1,50 @@
+{
+  "name": "vallentuna-survey-tool-questionnaires",
+  "version": "1.0.0",
+  "private": true,
+  "dependencies": {
+    "@emotion/react": "latest",
+    "@emotion/styled": "latest",
+    "@mui/base": "^5.0.0-alpha.119",
+    "@mui/icons-material": "^5.11.9",
+    "@mui/material": "latest",
+    "@types/node": "latest",
+    "@types/react": "latest",
+    "@types/react-dom": "latest",
+    "autoprefixer": "latest",
+    "axios": "^1.3.4",
+    "dayjs": "^1.11.7",
+    "dotenv": "^16.0.3",
+    "i18next": "^22.4.9",
+    "i18next-browser-languagedetector": "^7.0.1",
+    "i18next-http-backend": "^2.1.1",
+    "postcss": "latest",
+    "react": "latest",
+    "react-dom": "latest",
+    "react-hot-toast": "^2.4.0",
+    "react-i18next": "^12.1.5",
+    "react-query": "^3.39.3",
+    "react-scripts": "latest",
+    "tailwindcss": "latest",
+    "typescript": "latest",
+    "web-vitals": "latest"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}
