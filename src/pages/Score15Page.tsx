@@ -164,7 +164,7 @@ export default function Score15Page({
                 </Button>
 
                 <ButtonPrimary onClick={handleClickNext} endIcon={<SouthIcon />} sx={{ textTransform: "capitalize" }}>
-                  {t(questionnaireIndex === score15Data.length - 1 ? "Action.GoToORS" : "Action.Next")}
+                  {t(questionnaireIndex === score15Data.length - 1 ? "Action.GoToORS1" : "Action.Next")}
                 </ButtonPrimary>
               </Stack>
             </CardContent>
