@@ -93,7 +93,7 @@ export default function App() {
       setScoreEntity(z);
 
       axios.get(
-        `${API_URL}/score/getOne/${z.codeNumber}/${z.person}/${z.occasion}`
+        `${API_URL}/adult-score/getOne/${z.codeNumber}/${z.person}/${z.occasion}`
       ).then((res: any) => {
         setScore15Answers(toNumberArray(res.data.score15Answers));
         setOrsAndSatisfactionScaleAnswers(toNumberArray(res.data.orsAndSatisfactionScaleAnswers));
@@ -114,7 +114,7 @@ export default function App() {
     }, 0);
 
     axios.post(
-      `${API_URL}/score/create`,
+      `${API_URL}/adult-score/create`,
       {
         ...scoreEntity,
         ors: +ors || 0,
