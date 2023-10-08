@@ -147,21 +147,21 @@ export default function App() {
     else if (hasError) {
       return <div>{t("Message.Error")}</div>;
     }
-    else if (showScore15Page) {
-      return (
-        <Suspense fallback="Loading...">
-          <Score15Page
-            score15Data={score15Data}
-            activeScore15QuestionnaireIndex={activeScore15QuestionnaireIndex}
-            setActiveScore15QuestionnaireIndex={setActiveScore15QuestionnaireIndex}
-            score15Answers={score15Answers}
-            setScore15Answers={setScore15Answers}
-            setScore15={updateScore15}
-            setShowScore15Page={setShowScore15Page}
-          />
-        </Suspense>
-      );
-    }
+    // else if (showScore15Page) {
+    //   return (
+    //     <Suspense fallback="Loading...">
+    //       <Score15Page
+    //         score15Data={score15Data}
+    //         activeScore15QuestionnaireIndex={activeScore15QuestionnaireIndex}
+    //         setActiveScore15QuestionnaireIndex={setActiveScore15QuestionnaireIndex}
+    //         score15Answers={score15Answers}
+    //         setScore15Answers={setScore15Answers}
+    //         setScore15={updateScore15}
+    //         setShowScore15Page={setShowScore15Page}
+    //       />
+    //     </Suspense>
+    //   );
+    // }
     else {
       return (
         <Suspense fallback="Loading...">
