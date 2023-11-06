@@ -172,11 +172,11 @@ export default function VASScalePage({
                   >
                     <KeyboardBackspaceIcon color="success" />
                   </Button> */}
-                  <ButtonPrimary onClick={() => onNextSatisfaction()}>{t("Action.Submit")}</ButtonPrimary>
+                  <ButtonPrimary onClick={() => onNextSatisfaction()}>{t("Action.GoToSatisfaction")}</ButtonPrimary>
                 </>
               ) : (
                 <ButtonPrimary onClick={downStep} endIcon={<SouthIcon />} sx={{ textTransform: "capitalize" }}>
-                  {t("Action.GoToSatisfaction")}
+                  {t("Action.Next")}
                 </ButtonPrimary>
               )}
             </Stack>
