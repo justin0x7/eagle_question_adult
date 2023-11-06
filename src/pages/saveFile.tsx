@@ -55,7 +55,7 @@ export default function OrsAndSatisfactionScalePage({
 
   return (
     <Container sx={{ maxWidth: "768px", backgroundColor: "#fafafa" }}>
-      {/* <Typography variant="h4" align="center" color="success.main" fontWeight="bold" p={6}>VAS
+      <Typography variant="h4" align="center" color="success.main" fontWeight="bold" p={6}>VAS
         
       </Typography>
 
@@ -65,11 +65,12 @@ export default function OrsAndSatisfactionScalePage({
         <Fab size="small" sx={{ position: "relative", bottom: "130px", height: "17px", width: "36px" }} color="primary" aria-label="add" onClick={handleClickOpen} >
           <QuestionMarkIcon />
         </Fab></Typography>
-      </Stack> */}
+      </Stack>
 
-      {/* <Stack gap={3}>
+      <Stack gap={3}>
         {orsData.map((data, index) => (
           <Stack alignItems="center" key={index} gap={1}>
+            {/* <Typography onClick={handleClick} fontWeight="bold" variant="h6">{data.title}</Typography> */}
             {!showDescription && (
             <Typography fontWeight="bold" variant="h6">{data.description}</Typography>
             )}
@@ -84,7 +85,7 @@ export default function OrsAndSatisfactionScalePage({
             />
           </Stack>
         ))}
-      </Stack> */}
+      </Stack>
 
       {/* Satisfaction Scale is not for v1.0 */}
 

@@ -4,7 +4,7 @@ import React, { Suspense, useCallback, useEffect, useState } from 'react';
 import { useTranslation } from "react-i18next";
 import { API_URL } from './core/constants/base.const';
 import OrsAndSatisfactionScalePage from './pages/OrsAndSatisfactionScalePage';
-import Score15Page from './pages/Score15Page';
+import VASScalePage from "./pages/VASScalePage";
 
 type ScoreEntity = {
   codeNumber: string;
@@ -43,20 +43,16 @@ export default function App() {
   ];
   const orsData = [
     {
-      title: t("ORS.Feeling4"),
-      description: t("ORS.Generally")
-    },
-    {
       title: t("ORS.Feeling1"),
       description: t("ORS.Individual")
     },
     {
-      title: t("ORS.Feeling3"),
-      description: t("ORS.Social")
-    },    
-    {
       title: t("ORS.Feeling2"),
       description: t("ORS.CloseRelationships")
+    },
+    {
+      title: t("ORS.Feeling3"),
+      description: t("ORS.Social")
     },
   ];
   const satisfactionScaleData = [
@@ -80,12 +76,16 @@ export default function App() {
   const [orsAndSatisfactionScaleAnswers, setOrsAndSatisfactionScaleAnswers] = useState<Array<number>>([
     ...[...Array(orsData.length)].map(_v => 0),
     // Satisfaction Scale is not for v1.0
-    // ...[...Array(satisfactionScaleData.length)].map(_v => 1),
+    ...[...Array(satisfactionScaleData.length)].map(_v => 1),
   ]);
 
   const toNumberArray = useCallback((values: string[] | undefined) => {
     return values ? values.map(value => +value) : [];
   }, []);
+
+  const nextSatisfation = () => {
+    setShowScore15Page(false)
+  }
 
   useEffect(() => {
     try {
@@ -147,21 +147,20 @@ export default function App() {
     else if (hasError) {
       return <div>{t("Message.Error")}</div>;
     }
-    // else if (showScore15Page) {
-    //   return (
-    //     <Suspense fallback="Loading...">
-    //       <Score15Page
-    //         score15Data={score15Data}
-    //         activeScore15QuestionnaireIndex={activeScore15QuestionnaireIndex}
-    //         setActiveScore15QuestionnaireIndex={setActiveScore15QuestionnaireIndex}
-    //         score15Answers={score15Answers}
-    //         setScore15Answers={setScore15Answers}
-    //         setScore15={updateScore15}
-    //         setShowScore15Page={setShowScore15Page}
-    //       />
-    //     </Suspense>
-    //   );
-    // }
+    else if (showScore15Page) {
+      return (
+      <Suspense fallback="Loading...">
+        <VASScalePage
+          orsData={orsData}
+          // satisfactionScaleData={satisfactionScaleData}
+          orsAndSatisfactionScaleAnswers={orsAndSatisfactionScaleAnswers}
+          setOrsAndSatisfactionScaleAnswers={setOrsAndSatisfactionScaleAnswers}
+          // setShowScore15Page={setShowScore15Page}
+          onNextSatisfaction={nextSatisfation}
+        />
+      </Suspense>
+      )
+    }
     else {
       return (
         <Suspense fallback="Loading...">
