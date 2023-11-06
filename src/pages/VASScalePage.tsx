@@ -176,7 +176,7 @@ export default function VASScalePage({
                 </>
               ) : (
                 <ButtonPrimary onClick={downStep} endIcon={<SouthIcon />} sx={{ textTransform: "capitalize" }}>
-                  {t("Action.Next")}
+                  {t("Action.GoToSatisfaction")}
                 </ButtonPrimary>
               )}
             </Stack>
